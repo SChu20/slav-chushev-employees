@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Project Analyzer for Sirma</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+<h2>Upload CSV</h2>
+<form method="post" enctype="multipart/form-data" action="/upload">
+    <input type="file" name="file" required />
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+
+<div th:if="${error}" class="alert alert-danger mt-3" th:text="${error}"></div>
+
+<h2 th:text="${topPair}">Top pair info will appear here</h2>
+
+<table class="table table-striped mt-4" th:if="${results}">
+    <thead>
+    <tr>
+        <th>Employee #1</th>
+        <th>Employee #2</th>
+        <th>Project ID</th>
+        <th>Days Worked Together</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="r : ${results}">
+        <td th:text="${r.empId1}"></td>
+        <td th:text="${r.empId2}"></td>
+        <td th:text="${r.projectId}"></td>
+        <td th:text="${r.daysWorkedTogether}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

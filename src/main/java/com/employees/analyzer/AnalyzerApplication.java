@@ -1,13 +1,13 @@
-package com.employees.pairfinder;
+package com.employees.analyzer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PairfinderApplication {
+public class AnalyzerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PairfinderApplication.class, args);
+		SpringApplication.run(AnalyzerApplication.class, args);
 	}
 
 }

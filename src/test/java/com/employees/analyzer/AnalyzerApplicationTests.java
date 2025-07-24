@@ -1,10 +1,10 @@
-package com.employees.pairfinder;
+package com.employees.analyzer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PairfinderApplicationTests {
+class AnalyzerApplicationTests {
 
 	@Test
 	void contextLoads() {
